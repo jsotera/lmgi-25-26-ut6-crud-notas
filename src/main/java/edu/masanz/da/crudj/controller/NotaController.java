@@ -41,6 +41,7 @@ public class NotaController {
         model.put("tieneSiguiente", tieneSiguiente);
         model.put("paginaSiguiente", numeroPagina + 1);
 
+        // me llega un array list de tipo NOTA
         model.put("notas", notaService.obtenerNotas(numeroPagina, NOTAS_POR_PAGINA));
 
         context.render("templates/lista-notas.ftl", model);
